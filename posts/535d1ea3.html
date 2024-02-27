@@ -1,0 +1,435 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>日常记录 | Skyline</title><meta name="keywords" content="2022,记录"><meta name="author" content="Skyline"><meta name="copyright" content="Skyline"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="基于uv、pv、白名单、ab实验、正交     12.121、今天学习了两个小时 2、看完了美团线程池的文章，以及线程池实现原理的文章 https:&#x2F;&#x2F;blog.csdn.net&#x2F;zhengzhaoyang122&#x2F;article&#x2F;details&#x2F;110789385、https:&#x2F;&#x2F;www.cnblogs.com&#x2F;hanease&#x2F;p&#x2F;15869691.html、  https:&#x2F;&#x2F;www.zhihu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日常记录">
+<meta property="og:url" content="https://ningxis.github.io/posts/535d1ea3.html">
+<meta property="og:site_name" content="Skyline">
+<meta property="og:description" content="基于uv、pv、白名单、ab实验、正交     12.121、今天学习了两个小时 2、看完了美团线程池的文章，以及线程池实现原理的文章 https:&#x2F;&#x2F;blog.csdn.net&#x2F;zhengzhaoyang122&#x2F;article&#x2F;details&#x2F;110789385、https:&#x2F;&#x2F;www.cnblogs.com&#x2F;hanease&#x2F;p&#x2F;15869691.html、  https:&#x2F;&#x2F;www.zhihu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-1e7bd042df73e47bb951e70b298c96ca_1440w.webp?source=1940ef5c">
+<meta property="article:published_time" content="2022-12-28T09:55:54.000Z">
+<meta property="article:modified_time" content="2022-12-28T10:11:28.792Z">
+<meta property="article:author" content="Skyline">
+<meta property="article:tag" content="2022">
+<meta property="article:tag" content="记录">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.zhimg.com/80/v2-1e7bd042df73e47bb951e70b298c96ca_1440w.webp?source=1940ef5c"><link rel="shortcut icon" href="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/favicon.png"><link rel="canonical" href="https://ningxis.github.io/posts/535d1ea3"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '日常记录',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-12-28 18:11:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/01-22-mogai.css"><link rel="stylesheet" href="/css/ali_icon.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/head.jpeg" onerror="onerror=null;src='https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouyex"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-zuixinwenzhang_huaban"></i><span> 找文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-fenlei1"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-biaoqian1"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-shijianzhou"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友人帐</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw iconfont icon-shuji"></i><span> 书籍</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw iconfont icon-yingshi1"></i><span> 电影</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-gerenzhongxin"></i><span> 关于作者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic1.zhimg.com/80/v2-1e7bd042df73e47bb951e70b298c96ca_1440w.webp?source=1940ef5c')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Skyline</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouyex"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-zuixinwenzhang_huaban"></i><span> 找文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-fenlei1"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-biaoqian1"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-shijianzhou"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-lianjie"></i><span> 友人帐</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw iconfont icon-shuji"></i><span> 书籍</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw iconfont icon-yingshi1"></i><span> 电影</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-gerenzhongxin"></i><span> 关于作者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">日常记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-28T09:55:54.000Z" title="发表于 2022-12-28 17:55:54">2022-12-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-28T10:11:28.792Z" title="更新于 2022-12-28 18:11:28">2022-12-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">7.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>26分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="日常记录"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>基于uv、pv、白名单、ab实验、正交    </p>
+<h2 id="12-12"><a href="#12-12" class="headerlink" title="12.12"></a>12.12</h2><p>1、今天学习了两个小时</p>
+<p>2、看完了美团线程池的文章，以及线程池实现原理的文章</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhengzhaoyang122/article/details/110789385%E3%80%81https://www.cnblogs.com/hanease/p/15869691.html%E3%80%81">https://blog.csdn.net/zhengzhaoyang122/article/details/110789385、https://www.cnblogs.com/hanease/p/15869691.html、</a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/485071288/answer/2468999501">https://www.zhihu.com/question/485071288/answer/2468999501</a></p>
+<p>3、明天看concurrentHashMap的实现原理</p>
+<h2 id="12-11"><a href="#12-11" class="headerlink" title="12.11"></a>12.11</h2><p>1、今天学习了3小时</p>
+<p>2、看了AQS的应用的文章、了解了线程池的核心参数和类型</p>
+<p><a target="_blank" rel="noopener" href="https://blog.51cto.com/u_15659694/5733637%E3%80%81https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html">https://blog.51cto.com/u_15659694/5733637、https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html</a></p>
+<p>3、看完美团关于线程池的文章，熟悉线程池的实现原理</p>
+<h2 id="12-10"><a href="#12-10" class="headerlink" title="12.10"></a>12.10</h2><p>1、今天学习了4小时</p>
+<p>2、看了AQS的实现原理和部分源码，基本理解了AQS的加锁原理，了解了公平锁和非公平锁的实现原理</p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000017372067%E3%80%81https://www.cnblogs.com/wang-meng/p/12816829.html%E3%80%81https://juejin.cn/post/6844903895622221832">https://segmentfault.com/a/1190000017372067、https://www.cnblogs.com/wang-meng/p/12816829.html、https://juejin.cn/post/6844903895622221832</a></p>
+<p>3、看并发包下对于AQS的应用</p>
+<h2 id="12-9"><a href="#12-9" class="headerlink" title="12.9"></a>12.9</h2><p>1、今天学习了两个小时</p>
+<p>2、看了美团关于AQS的解析文章、看了一些阻塞队列的实现和使用</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37774171/article/details/122742494%E3%80%81https://www.jianshu.com/p/4fae4c051111">https://blog.csdn.net/qq_37774171/article/details/122742494、https://www.jianshu.com/p/4fae4c051111</a></p>
+<p>3、看AQS的实现原理、总结并发的知识点输出</p>
+<h2 id="12-8"><a href="#12-8" class="headerlink" title="12.8"></a>12.8</h2><p>1、今天学习了两个半小时</p>
+<p>2、看了futuretask中的装饰者模式的应用、看了一些aqs的文档、研究了chatGPT的应用</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zxc123e/article/details/89684419%E3%80%81https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html%E3%80%81">https://blog.csdn.net/zxc123e/article/details/89684419、https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html、</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903895622221832">https://juejin.cn/post/6844903895622221832</a></p>
+<p>3、看美团关于AQS的文章，和并发包下的一些类</p>
+<p>2022年12月7日23:31:13<br>作用、cas、装饰者模式、并发包、线程池、线程复用、池化思想、blockQueue、算法题</p>
+<h2 id="12-7"><a href="#12-7" class="headerlink" title="12.7"></a>12.7</h2><p>1、今天学习了一个小时</p>
+<p>2、主要看了futuretask的源代码和原理解析</p>
+<p><a target="_blank" rel="noopener" href="http://events.jianshu.io/p/18eced78038a">http://events.jianshu.io/p/18eced78038a</a></p>
+<p>3、明天看完CAS和装饰者模式的应用设计</p>
+<h2 id="12-6"><a href="#12-6" class="headerlink" title="12.6"></a>12.6</h2><p>1、今天学习了1小时</p>
+<p>2、看了CompletableFuture的实现</p>
+<p>通过链表来完成任务的回调，依赖处理。每个回调方法对应一个CompletableFuture, 如果上一个</p>
+<p>CompletableFuture未完成，则将当前CompletableFuture添加到上一个对象的栈属性中，任务执行完毕后，回调栈中的Completion方法</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/PNGYUL/article/details/119838961">https://blog.csdn.net/PNGYUL/article/details/119838961</a></p>
+<p>3、通过源码debug查看任务间的依赖关系理解执行过程</p>
+<h2 id="12-5"><a href="#12-5" class="headerlink" title="12.5"></a>12.5</h2><p>1、今天学习了1小时</p>
+<p>2、看了一些CompletableFuture的源码，和一些api接口的设计，写了CompletableFuture的任务运行demo</p>
+<p>runAsync、supplyAsync，thenApply和thenApplyAsync等</p>
+<p>异步回调处理的接口类似，使用thenApply时子任务与父任务使用的是同一个线程，thenApplyAsync在子任务中可能是另起一个线程执行任务，并且thenRunAsync可以自定义线程池，默认的使用ForkJoinPool.commonPool()</p>
+<p>组合任务处理；</p>
+<p>thenCombine、thenAcceptBoth 和runAfterBoth，组合的两个任务都成功才进行下面的任务，thenCombine有返回值</p>
+<p>applyToEither、acceptEither和runAfterEither 组合的两个任务有一个成功就进行下面的任务 applyToEither有返回值</p>
+<p>allOf &#x2F; anyOf  所有的任务都执行完返回null，任意任务执行完get时会抛异常，全执行完返回结果</p>
+<p>3、深入理解CompletableFuture的异步实现原理，多看源代码实现</p>
+<h2 id="12-4"><a href="#12-4" class="headerlink" title="12.4"></a>12.4</h2><p>1、今天学习了4个小时</p>
+<p>2、看完了美团关于CompletableFuture的技术文章，以及回调地狱的产生和解决，看了CAS的实现原理</p>
+<p>回调基于观察者模式和CAS通过栈的方式调用完成。CompletableFuture的接口传入参数包含函数式的接口，后续通过CompletableFuture和Completion入栈弹栈</p>
+<p>额外说明</p>
+<ul>
+<li>CompletableFuture还实现了CompletionState的一些接口<ul>
+<li>当CompletableFuture任务完成后，同步是用任务执行线程来执行依赖任务结果的函数或者行为</li>
+<li>所有异步的方法在没有显示指定executor参数的情况下都是复用ForkJoinPool.commonPool()线程池来执行</li>
+<li>所有CompletionState方法的实现都是相互独立的，以便一个方法的行为不会因为重载了其他方法而受影响</li>
+</ul>
+</li>
+<li>一个ComletableFuture任务可能有一些依赖其计算结果的行为方法，这些行为方法被手机到一个无锁基于CAS操作的链接起来的链表组成的栈中；当CompletableFuture的计算任务完成后，会自动弹出栈中的行为方法并执行</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/31d17fc56484%E3%80%81">https://www.jianshu.com/p/31d17fc56484、</a></p>
+<p>3、结合代码实现继续看CompletableFuture的实现原理，写任务处理的demo</p>
+<h2 id="12-3"><a href="#12-3" class="headerlink" title="12.3"></a>12.3</h2><ol>
+<li><p>今天学习了一个半小时</p>
+</li>
+<li><p>主要看了美团的技术文章和线程间的等待和唤醒、CompletableFuture的原理还是没理解需要继续花时间看，</p>
+<p>​    <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42480780/article/details/115904832%E3%80%81https://zhuanlan.zhihu.com/p/515993095">https://blog.csdn.net/weixin_42480780/article/details/115904832、https://zhuanlan.zhihu.com/p/515993095</a></p>
+</li>
+<li><p>继续看美团 CompletableFuture原理与实践 文章，理解CompletableFuture的实现原理，包括回调地狱问题</p>
+</li>
+</ol>
+<h2 id="12-2"><a href="#12-2" class="headerlink" title="12.2"></a>12.2</h2><ol>
+<li>今天学习了一个半小时</li>
+<li>看了awaitDone的实现过程、<ol>
+<li>如果线程被中断了，移除节点，抛出异常</li>
+<li>如果状态大于COMPLETING，那么直接返回</li>
+<li>如果状态是COMPLETING，在set和setException可以看到，处于COMPLETING是一个暂时状态，很快就会进入下一个状态，所以这儿就调用了Thread.yield()方法让步一下</li>
+<li>如果状态是NEW且节点为null，那么创建一个节点</li>
+<li>如果还没有将当前线程加入队列，那么将当前线程加入到等待队列中。由于WaitNode是一个单链表结构，FutureTask中保存了waiters的变量，就可以沿着该变量得到所有等待的线程</li>
+<li>如果限制了时间，那么计算出生出超出时间，挂起指定时间。当解除挂起时，如果计算还未完成，那么将会由于没有时间了，调用removeWaiter方法移除节点。</li>
+<li>如果没有限制时间，那么将线程无限挂起</li>
+</ol>
+</li>
+<li>completablefuture的实现原理，回顾整理扩展点和future的说辞</li>
+</ol>
+<h2 id="12-1"><a href="#12-1" class="headerlink" title="12.1"></a>12.1</h2><p>1、今天学习了三个小时</p>
+<p>2、类实现了BeanPostProcessor接口，在Bean对象在实例化和[依赖注入完毕后，每个类在初始化的前后都会执行前后扩展点的方法，可以在前后加入扩展。类继承了initializingBean接口，此类会在bean的属性初始化后会执行该方法（当前类只执行一次），实现 <code>Aware</code> 接口用于让 <code>bean</code> 能拥有某些额外的感知能力    。实现了Aware接口的bean在被初始化之后，可以把对应的资源通过set方法装配进去（获取对应资源 BeanNameAware：注入bean的名字 BeanFactoryAware：注入BeanFactory容器 ApplicationContextAware：注入ApplicationContext容器）进行后续操作</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_46127735/article/details/111034714">https://blog.csdn.net/qq_46127735/article/details/111034714</a></p>
+<p>3、明天看懂futuretask的cas和阻塞队列和LockSupport，串联get方法处理过程</p>
+<h2 id="11-30"><a href="#11-30" class="headerlink" title="11.30"></a>11.30</h2><p>1、今天学习了一个半小时</p>
+<p>2、主要是串联前面的知识点、看awaitDone的实现原理</p>
+<p>ApplicationContext的BeanFactory 的<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%AD%90%E7%B1%BB&spm=1001.2101.3001.7020">子类</a>，ApplicationContext可以在服务器启动的时候自动实例化所有的bean,而 BeanFactory只有在调用getBean()的时候才去实例化那个bean</p>
+<p>InitializingBean 继承该接口的类，在初始化bean的时候会执行该方法</p>
+<p>在Spring容器的创建过程中每一个bean对象的初始化方法（具体为Bean初始化前后）会回调BeanPostProcessor中定义的两个方法调用之前回调</p>
+<p>3、看completablefuture的实现原理</p>
+<h2 id="11-29"><a href="#11-29" class="headerlink" title="11.29"></a>11.29</h2><ol>
+<li>今天学习了一个半小时</li>
+<li>看了CompletableFuture的使用和api、以及一些实现原理    主要是异步回调实现任务编排                                                                                                                                                                                                                                                                                                 <a target="_blank" rel="noopener" href="https://blog.csdn.net/sermonlizhi/article/details/123356877%E3%80%81https://www.jianshu.com/p/abfa29c01e1d%E3%80%81https://www.cnblogs.com/ludongguoa/p/15316488.html">https://blog.csdn.net/sermonlizhi/article/details/123356877、https://www.jianshu.com/p/abfa29c01e1d、https://www.cnblogs.com/ludongguoa/p/15316488.html</a></li>
+<li>写线程间通信的demo和CompletableFuture调用的demo，知识点串联准备</li>
+</ol>
+<h2 id="11-28"><a href="#11-28" class="headerlink" title="11.28"></a>11.28</h2><p>1、今天学习了一个半小时</p>
+<p>2、看了线程间的通信机制，等待唤醒机制wait、notify、notifyAll，共享内存volatile 关键字、辅助类（CountDownLatch、CyclicBarrier、Semaphore），</p>
+<p>锁机制 LockSupport.park 与 LockSupport.unpark、ReentrantLock + Condition、</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/362772704%E3%80%81https://blog.csdn.net/h380115990/article/details/110439709%E3%80%81https://blog.csdn.net/weixin_53812805/article/details/124532640">https://zhuanlan.zhihu.com/p/362772704、https://blog.csdn.net/h380115990/article/details/110439709、https://blog.csdn.net/weixin_53812805/article/details/124532640</a></p>
+<p>3、看futuretask中运用的装饰者模式和了解computablefuture实现思想</p>
+<h2 id="11-27"><a href="#11-27" class="headerlink" title="11.27"></a>11.27</h2><p>1、今天学习了4小时</p>
+<p>2、看了futureTask关于awaitDone的源码，了解其实现原理。看了spring生命周期中的扩展点及其用法区别。看了线程的几种状态和状态间的转换</p>
+<p>不断轮询查看FutureTask的状态。在get阻塞期间：</p>
+<p>执行get的线程被中断，移除FutureTask的所有阻塞队列中的线程（waiters）,并抛出中断异常；FutureTask的状态转换为完成状态（正常完成或取消），则返回完成状态；FutureTask的状态变为COMPLETING, 则说明正在set结果，此时让线程等一等；FutureTask的状态为初始态NEW，则将当前线程加入到FutureTask的阻塞线程中去；get方法没有设置超时时间，则阻塞当前调用get线程；如果设置了超时时间，则判断是否达到超时时间，如果到达，则移除FutureTask的所有阻塞列队中的线程，并返回此时FutureTask的状态，如果未到达时间，则在剩下的时间内继续阻塞当前线程。</p>
+<p>New（新创建）Runnable（可运行）Blocked（被阻塞）Waiting（等待）Timed Waiting（计时等待）Terminated（被终止）</p>
+<p>​    <a target="_blank" rel="noopener" href="https://blog.csdn.net/codershamo/article/details/51901057%E3%80%81https://blog.csdn.net/qq_38826019/article/details/117389466%E3%80%81https://zhuanlan.zhihu.com/p/266709645">https://blog.csdn.net/codershamo/article/details/51901057、https://blog.csdn.net/qq_38826019/article/details/117389466、https://zhuanlan.zhihu.com/p/266709645</a></p>
+<p>3、明天了解线程间的通信机制和实现原理、重写spring的扩展点代码</p>
+<p>本周目标：</p>
+<p>futuretask怎么运用装饰者模式、<br>线程状态、转换<br>线程间通信<br>await</p>
+<p>线程池、线程复用、池化思想<br>computablefuture实现思想<br>aqs</p>
+<h2 id="11-26"><a href="#11-26" class="headerlink" title="11.26"></a>11.26</h2><p>1、学习了一个小时</p>
+<p>2、主要juc并发包中锁的使用，volatile、synchronized等关键字及内存模型原子性可见性有序性</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhongqifeng/p/14684028.html%E3%80%81https://blog.csdn.net/weixin_36759405/article/details/83034386">https://www.cnblogs.com/zhongqifeng/p/14684028.html、https://blog.csdn.net/weixin_36759405/article/details/83034386</a></p>
+<p>3、了解aqs的队列和锁实现原理</p>
+<h2 id="11-25"><a href="#11-25" class="headerlink" title="11.25"></a>11.25</h2><p>1、今天学习了两个小时</p>
+<p>2、aqs的实现原理、volatile 关键字+ CAS 比较和交换+ 一个虚拟的FIFO双向队列、排它锁和共享锁</p>
+<p>AQS采用了一个int类型的互斥变量state，0表示没有任务线程使用该资源，而大于等于1表示已经有线程正在持有锁资源。一个线程获取锁资源的时候，会判断state是否等于0（无锁状态），如果是，则把这个state更新为1，表示占用到锁，而这个过程中，如果多个线程同时做这样的操作，就会导致线程的安全性问题。因此AQS采用了CAS机制，来保证互斥变量state更新的原子性。未获得到锁的线程通过Unsafe类中的park方法去进行阻塞，把阻塞的线程按照先进先出的原则去放到一个双向链表的结构中，当获得所得线程释放锁之后，会从这个双向链表的头部去唤醒下一个等待的线程再去竞争锁。</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hanease/p/14897445.html%E3%80%81https://zhuanlan.zhihu.com/p/377412161%E3%80%81https://blog.csdn.net/lzh804121985/article/details/124143761">https://www.cnblogs.com/hanease/p/14897445.html、https://zhuanlan.zhihu.com/p/377412161、https://blog.csdn.net/lzh804121985/article/details/124143761</a></p>
+<p>3、明天回顾本周所学的知识点，串联准备明天的讲解输出</p>
+<h2 id="11-24"><a href="#11-24" class="headerlink" title="11.24"></a>11.24</h2><p>1、今天学习了一个小时</p>
+<p>2、jdk和cglib的主要区别，jdk是反射机制生成一个实现代理接口的匿名类，在调用具体方法前调用InvokeHandler来处理 ，所以jdk被代理的对象必须实现接口，cglib采用asm字节码框架动态修改字节码生成子类，若 目标对象实现了接口默认使用jdk动态代理、</p>
+<p>jdk代理类和目标类都实现了同样的接口，InvocationHandler持有目标类，代理类委托InvocationHandler去调用目标类的原始方法 </p>
+<p>cglib代理的代理类继承了目标类并重写了目标方法，通过回调函数MethodInterceptor调用父类方法执行原始逻辑</p>
+<p>静态代理只能手动完成代理，动态代理可以运行时动态生成代码，没有代理类的扩展限制</p>
+<p>3、明天看coccurrent并发包文档，了解AQS的实现原理</p>
+<h2 id="11-23"><a href="#11-23" class="headerlink" title="11.23"></a>11.23</h2><p>1、今天学习了一个半小时</p>
+<p>2、熟悉了三级缓存关于aop代理类的解决方案、写了一道算法题整数反转、看了几篇动态代理的文档</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xujq/p/16283608.html%E3%80%81https://blog.csdn.net/buyaoshuohua1/article/details/78923773%E3%80%81https://blog.csdn.net/qq_46494427/article/details/124173617">https://www.cnblogs.com/xujq/p/16283608.html、https://blog.csdn.net/buyaoshuohua1/article/details/78923773、https://blog.csdn.net/qq_46494427/article/details/124173617</a></p>
+<p>3、明天继续看jdk和cglib的代理、了解其代理的实现机制和区别</p>
+<h2 id="11-22"><a href="#11-22" class="headerlink" title="11.22"></a>11.22</h2><p>1、今天学习了两小时</p>
+<p>2、写完了三级缓存和扩展点的代码、看了部分文档了解了三级缓存的原理、</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_67401417/article/details/125244712%E3%80%81https://zhuanlan.zhihu.com/p/496273636">https://blog.csdn.net/m0_67401417/article/details/125244712、https://zhuanlan.zhihu.com/p/496273636</a></p>
+<p>3、三级缓存关于aop代理的部分还有点不明白，明天看完，以及spring的aop动态代理熟悉原理</p>
+<h2 id="11-21"><a href="#11-21" class="headerlink" title="11.21"></a>11.21</h2><p>1、今天学习了两小时</p>
+<p>2、看了部分futuretask的源码，理解了get返回值的原理，其中涉及到UNSAFE的状态转换不是很明白。其中的compareAndSwapObject就是CAS</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/CsWarmSun/article/details/122274555%EF%BC%8C%E4%B8%BB%E8%A6%81%E6%BA%90%E7%A0%81%E5%AE%9E%E7%8E%B0%E5%A6%82%E4%B8%8B%EF%BC%8C%E5%88%9B%E5%BB%BAfuturetask%E6%97%B6%E6%8A%8Acallable%E5%92%8Cresult%E6%8F%90%E4%BA%A4%E5%88%B0runnable%E4%B8%AD%EF%BC%8C%E5%90%8E%E7%BB%ADstart%E6%89%A7%E8%A1%8C%E6%97%B6%E8%B0%83%E7%94%A8call%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E8%8E%B7%E5%8F%96%E7%BB%93%E6%9E%9C">https://blog.csdn.net/CsWarmSun/article/details/122274555，主要源码实现如下，创建futuretask时把callable和result提交到runnable中，后续start执行时调用call方法执行获取结果</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="type">int</span> <span class="title function_">awaitDone</span><span class="params">(<span class="type">boolean</span> timed, <span class="type">long</span> nanos)</span></span><br><span class="line">        <span class="keyword">throws</span> InterruptedException &#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="type">long</span> <span class="variable">deadline</span> <span class="operator">=</span> timed ? System.nanoTime() + nanos : <span class="number">0L</span>;</span><br><span class="line">        <span class="type">WaitNode</span> <span class="variable">q</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">boolean</span> <span class="variable">queued</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">            <span class="keyword">if</span> (Thread.interrupted()) &#123;</span><br><span class="line">                removeWaiter(q);</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">InterruptedException</span>();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="type">int</span> <span class="variable">s</span> <span class="operator">=</span> state;</span><br><span class="line">            <span class="keyword">if</span> (s &gt; COMPLETING) &#123;</span><br><span class="line">                <span class="keyword">if</span> (q != <span class="literal">null</span>)</span><br><span class="line">                    q.thread = <span class="literal">null</span>;</span><br><span class="line">                <span class="keyword">return</span> s;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (s == COMPLETING) <span class="comment">// cannot time out yet</span></span><br><span class="line">                Thread.yield();</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (q == <span class="literal">null</span>)</span><br><span class="line">                q = <span class="keyword">new</span> <span class="title class_">WaitNode</span>();</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (!queued)</span><br><span class="line">                queued = UNSAFE.compareAndSwapObject(<span class="built_in">this</span>, waitersOffset,</span><br><span class="line">                                                     q.next = waiters, q);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (timed) &#123;</span><br><span class="line">                nanos = deadline - System.nanoTime();</span><br><span class="line">                <span class="keyword">if</span> (nanos &lt;= <span class="number">0L</span>) &#123;</span><br><span class="line">                    removeWaiter(q);</span><br><span class="line">                    <span class="keyword">return</span> state;</span><br><span class="line">                &#125;</span><br><span class="line">                LockSupport.parkNanos(<span class="built_in">this</span>, nanos);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                LockSupport.park(<span class="built_in">this</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3、三级缓存原理理解，编码实现</p>
+<h2 id="11-20"><a href="#11-20" class="headerlink" title="11.20"></a>11.20</h2><p>1、今天学习了五小时</p>
+<p>2、spring注解重新抽取了代码，增加了二级缓存和bean注入，方法间的颗粒度不够后面再优化。写了装饰者模式的demo、像servlet和BeanFactory都用到了装饰者模式，可以更好的动态拓展功能，一般采用抽象类的方式，比起接口的单继承，抽象类可以多实现</p>
+<p><a target="_blank" rel="noopener" href="https://blog.51cto.com/learningfish/5387281%E3%80%81https://zhuanlan.zhihu.com/p/421998141">https://blog.51cto.com/learningfish/5387281、https://zhuanlan.zhihu.com/p/421998141</a></p>
+<p>看了一部分futuretask的文档</p>
+<p>当FutureTask处于未启动或者已启动的状态时，调用FutureTask对象的get方法会将导致调用线程阻塞。当FutureTask处于已完成的状态时，调用FutureTask的get方法会立即放回调用结果或者抛出异常。主要通过任务状态来判断</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39654841/article/details/90631795%E3%80%81https://blog.csdn.net/qq_40685275/article/details/99838677%E3%80%81https://blog.csdn.net/CsWarmSun/article/details/122274555">https://blog.csdn.net/qq_39654841/article/details/90631795、https://blog.csdn.net/qq_40685275/article/details/99838677、https://blog.csdn.net/CsWarmSun/article/details/122274555</a></p>
+<p>3、明天完成三级缓存的理解，在现有代码上体现，futuretask的返回值和回调原理理解</p>
+<h2 id="11-19"><a href="#11-19" class="headerlink" title="11.19"></a>11.19</h2><p>1、今天学习了四个半小时，开会两个半小时</p>
+<p>2、整理了自己的上周知识并归纳输出，看了java并发包，</p>
+<p>并发包主要包含以下核心类，主要使用锁机制并发问题</p>
+<p>锁机制类Locks : Lock, Condition, ReentrantLock, ReadWriteLock,LockSupport</p>
+<p>原子操作类 Atomic : Atomiclnteger,AtomicLong,LongAdder  主要保证原子性</p>
+<p>线程池相关类Executor : Future, Callable, Executor,ExecutorService </p>
+<p>信号量三组工具类Tools : CountDownLatch, CyclicBarrier,Semaphore</p>
+<p>并发集合类Collections : CopyOnWriteArrayList, ConcurrentHashMap</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hanease/p/15893075.html">https://www.cnblogs.com/hanease/p/15893075.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tianwailaikewbb/article/details/120589084">https://blog.csdn.net/tianwailaikewbb/article/details/120589084</a></p>
+<p>AbstractQueuedSynchronizer抽象队列同步器 AQS</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/64089fe37fc5">https://www.jianshu.com/p/64089fe37fc5</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41818733/article/details/115640256">https://blog.csdn.net/weixin_41818733/article/details/115640256</a></p>
+<p>3、明天完成对于spring注解方法的拆分以及bean注入、其他注解和扩展的接口实现的编码，写一个装饰器模式的demo，看一些futuretask的文档</p>
+<h2 id="11-15"><a href="#11-15" class="headerlink" title="11.15"></a>11.15</h2><ol>
+<li>今天学习了一个半小时</li>
+<li>写完了合并链表的算法题，bean的生命周期：bean创建–&gt;初始化–&gt;销毁 的过程  <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45723046/article/details/124546319">https://blog.csdn.net/weixin_45723046/article/details/124546319</a></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"> https:<span class="comment">//www.cnblogs.com/misscai/p/14749225.html</span></span><br><span class="line"> Spring 对bean 进行实例化。</span><br><span class="line">  Spring 将值和bean的引用注入到bean对应的属性中。</span><br><span class="line">  如果bean实现了BeanNameAware接口，Spring将bean的ID传递给setBean-Name()  方法。</span><br><span class="line">  如果bean 实现了BeanFactoryAware接口，Spring将调用setBeanFactory() 方法，将BeanFactory容器实例传入。</span><br><span class="line">  如果bean实现了ApplicationContextAware接口，Spring将调用setApplicationContext() 方法，将bean所在的应用上下文的引用传入进来。</span><br><span class="line">  如果bean实现了BeanPostProcessor接口，Spring将调用它们的post-ProcessBeforeInitialization() 方法</span><br><span class="line">  如果bean实现了InitializingBean接口，Spring将调用它们的after-PropertiesSet()方法。类似的，如果bean使用init-method声明了初始化方法，该方法也会被调用。</span><br><span class="line">  如果bean实现了BeanPostProcessor接口，Spring将调用它们的post-ProcessAfterInitialization() 方法。</span><br><span class="line">  此时, bean 已经准备就绪，可以被应用程序使用了，它们将一直驻留在应用上下文中，直到该应用上下文被销毁。</span><br><span class="line">  如果bean实现了DisposableBean接口，Spring将调用它的destory()接口方法。同样,如果bean使用destroy-method声明了销毁方法，该方法也会被调用。</span><br><span class="line"></span><br><span class="line">https:<span class="comment">//www.zhihu.com/question/38597960</span></span><br><span class="line"></span><br><span class="line"><span class="number">1.</span>Spring对Bean进行实例化（相当于程序中的<span class="keyword">new</span> <span class="title class_">Xx</span>()）</span><br><span class="line"><span class="number">2.</span>Spring将值和Bean的引用注入进Bean对应的属性中</span><br><span class="line"><span class="number">3.</span>如果Bean实现了BeanNameAware接口，Spring将Bean的ID传递给setBeanName()方法（实现BeanNameAware清主要是为了通过Bean的引用来获得Bean的ID，一般业务中是很少有用到Bean的ID的）</span><br><span class="line"><span class="number">4.</span>如果Bean实现了BeanFactoryAware接口，Spring将调用setBeanDactory(BeanFactory bf)方法并把BeanFactory容器实例作为参数传入。（实现BeanFactoryAware 主要目的是为了获取Spring容器，如Bean通过Spring容器发布事件等）</span><br><span class="line"><span class="number">5.</span>如果Bean实现了ApplicationContextAwaer接口，Spring容器将调用setApplicationContext(ApplicationContext ctx)方法，把y应用上下文作为参数传入.(作用与BeanFactory类似都是为了获取Spring容器，不同的是Spring容器在调用setApplicationContext方法时会把它自己作为setApplicationContext 的参数传入，而Spring容器在调用setBeanDactory前需要程序员自己指定（注入）setBeanDactory里的参数BeanFactory )</span><br><span class="line"><span class="number">6.</span>如果Bean实现了BeanPostProcess接口，Spring将调用它们的postProcessBeforeInitialization（预初始化）方法（作用是在Bean实例创建成功后对进行增强处理，如对Bean进行修改，增加某个功能）</span><br><span class="line"><span class="number">7.</span>如果Bean实现了InitializingBean接口，Spring将调用它们的afterPropertiesSet方法，作用与在配置文件中对Bean使用init-method声明初始化的作用一样，都是在Bean的全部属性设置成功后执行的初始化方法。</span><br><span class="line"><span class="number">8.</span>如果Bean实现了BeanPostProcess接口，Spring将调用它们的postProcessAfterInitialization（后初始化）方法（作用与<span class="number">6</span>的一样，只不过<span class="number">6</span>是在Bean初始化前执行的，而这个是在Bean初始化后执行的，时机不同 )</span><br><span class="line"><span class="number">9.</span>经过以上的工作后，Bean将一直驻留在应用上下文中给应用使用，直到应用上下文被销毁</span><br><span class="line"><span class="number">10.</span>如果Bean实现了DispostbleBean接口，Spring将调用它的destory方法，作用与在配置文件中对Bean使用destory-method属性的作用一样，都是在Bean实例销毁前执行的方法。</span><br></pre></td></tr></table></figure>
+
+<p>明天继续学习springbean的生命周期，查看BeanNameAware、BeanFactoryAware、ApplicationContextAware等接口的源码</p>
+<h2 id="11-14"><a href="#11-14" class="headerlink" title="11.14"></a>11.14</h2><ol>
+<li>今天学习了两个半小时</li>
+<li>写完了一道算法题和spring观察者模式的demo，代码已提交</li>
+<li>明天写完合并链表的算法题、写spring的autowired注解和bean注解、看文档输出bean的生命周期</li>
+</ol>
+<h2 id="11-13"><a href="#11-13" class="headerlink" title="11.13"></a>11.13</h2><ol>
+<li>今天学习了4小时</li>
+<li>写完了策略模式和观察者模式的demo、java.util包中，提供了Observable类以及Observer接口，在此基础上可以实现观察者模式但效率较低 <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000040530952">https://segmentfault.com/a/1190000040530952</a>  观察者模式是一种对象行为模式，可用于发布订阅等场景，将目标与观察者之间解耦。component注解类中的autowired后面不知道怎么写了，</li>
+<li>明天完成无重复子串的算法题，了解滑动窗口的原理，写spring中事件监听器实现观察者模式的demo</li>
+</ol>
+<h2 id="11-12"><a href="#11-12" class="headerlink" title="11.12"></a>11.12</h2><ol>
+<li><p>今天学习了四个半小时</p>
+</li>
+<li><p>主要是写了spring的componentScan、component、autowired注解，碰到了很多问题，写的很困难    参考文档：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/417421318/answer/2503989509%E3%80%81https://blog.csdn.net/weixin_39864738/article/details/110922688%E3%80%81https://blog.csdn.net/qq_42764468/article/details/124520971">https://www.zhihu.com/question/417421318/answer/2503989509、https://blog.csdn.net/weixin_39864738/article/details/110922688、https://blog.csdn.net/qq_42764468/article/details/124520971</a> </p>
+</li>
+<li><p>看了几篇策略模式的文档，多业务场景下可以用策略模式重构代码，避免if else引起的代码复杂臃肿、策略选择多样还能灵活拓展，不影响现有的业务逻辑  <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3bcf55cf83d3%E3%80%81https://zhuanlan.zhihu.com/p/346607652">https://www.jianshu.com/p/3bcf55cf83d3、https://zhuanlan.zhihu.com/p/346607652</a></p>
+</li>
+<li><p>明天把component注解的对象实例化过程写完，包括一级缓存和二级缓存、autowired注入，多重if、else的策略模式demo</p>
+</li>
+</ol>
+<h2 id="11-09"><a href="#11-09" class="headerlink" title="11.09"></a>11.09</h2><p>今天学了两个小时，开会开了两个小时</p>
+<p>函数式编程</p>
+<p>串行流：list.stream()</p>
+<p>并行流：list.parallelStream()</p>
+<p><a target="_blank" rel="noopener" href="https://www.shuzhiduo.com/A/QW5Y3RQGzm/">https://www.shuzhiduo.com/A/QW5Y3RQGzm/</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_58148854/article/details/125584008">https://blog.csdn.net/qq_58148854/article/details/125584008</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Collector 是专门用来作为 Stream 的 collect 方法的参数的，而 Collectors 是作为生产具体 Collector 的工具类。</span><br><span class="line">功能齐全，可以用来分组等操作、其中有些方法也可以用函数式编程的流式处理</span><br><span class="line">https:<span class="comment">//blog.csdn.net/V539413949/article/details/124516374、https://blog.csdn.net/qq_43842093/article/details/122136492</span></span><br><span class="line">Collector 用于合并 Stream 的元素处理结果</span><br><span class="line">forEach：该方法用于对 Stream 中的每个元素进行迭代操作</span><br><span class="line">map：该方法用于将每个元素映射到对应的结果上,返回的是结果的流</span><br><span class="line">filter：该方法用于过滤满足条件的元素</span><br><span class="line">IntSummaryStatistics 统计工具 ： 求最大值、最小值、和、平均数</span><br></pre></td></tr></table></figure>
+
+<p>明天完成spring的component开发和继续前面未完成的计划</p>
+<h2 id="11-08"><a href="#11-08" class="headerlink" title="11.08"></a>11.08</h2><p>今天学习了三小时，主要是看了stream流和函数式接口</p>
+<p>Stream流：java8新特性，以函数式编程的方式操作集合</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/533692264">https://zhuanlan.zhihu.com/p/533692264</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/339038230">https://zhuanlan.zhihu.com/p/339038230</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ss810540895/article/details/126172285">https://blog.csdn.net/ss810540895/article/details/126172285</a></p>
+<p>可以通过一系列的流处理集合数据、得到最终想要的结果、中间的流式处理只会形成流，不回处理结果，</p>
+<p>先在管道中创建一系列的流，在新流上调用终端操作，再执行中间的流处理逻辑，且流只能被调用一次</p>
+<p>平常使用较多的场景是排序、数据转换、筛选</p>
+<p>常见函数：java.util.function包下的接口</p>
+<p>Function函数  传入一个参数T，返回一个参数R</p>
+<p>Predicate函数     传入一个参数T，返回boolean</p>
+<p>Consumer函数 传入一个参数T，返回空</p>
+<p>Optional接口，允许返回空对象，避免空指针产生，可以更好地转换对象值，内置的方法也能过滤数据</p>
+<p><a target="_blank" rel="noopener" href="https://www.jdon.com/idea/java/using-optional-effectively-in-java-8.html">https://www.jdon.com/idea/java/using-optional-effectively-in-java-8.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903960050925581">https://juejin.cn/post/6844903960050925581</a></p>
+<p>Optional作为中间的数据转换，可以更好的避免空指针和处理数据</p>
+<p>明天写完，观察者和策略模式demo，3道算法题提交，思考spring扩展点的实现</p>
+<h2 id="11-06"><a href="#11-06" class="headerlink" title="11.06"></a>11.06</h2><p>今天学了4小时、看了S12全球总决赛、开会3.5小时</p>
+<p>写了无重复最长子串、合并有序链表的算法题</p>
+<p>看了一些循环依赖的文档：</p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/438247718/answer/1730527725">https://www.zhihu.com/question/438247718/answer/1730527725</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/151392267">https://zhuanlan.zhihu.com/p/151392267</a></p>
+<p>循环依赖是指多个对象之间的依赖形成了闭环，从而导致循环依赖</p>
+<p>循环依赖的解决方法是提前暴露，除了bean的map作为一级缓存，可以用二级缓存和三级缓存来解决循环依赖问题</p>
+<p>看了一点源码，还是没有理解透，后面要继续花时间，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> Object <span class="title function_">getSingleton</span><span class="params">(String beanName, <span class="type">boolean</span> allowEarlyReference)</span> &#123;</span><br><span class="line">		<span class="comment">// Quick check for existing instance without full singleton lock</span></span><br><span class="line">    	<span class="comment">//从一级缓存singletonObjects中获取是否存在当前bean</span></span><br><span class="line">		<span class="type">Object</span> <span class="variable">singletonObject</span> <span class="operator">=</span> <span class="built_in">this</span>.singletonObjects.get(beanName);</span><br><span class="line">    	<span class="comment">//如果为空且正在创建的单例bean Map中存在当前bean</span></span><br><span class="line">		<span class="keyword">if</span> (singletonObject == <span class="literal">null</span> &amp;&amp; isSingletonCurrentlyInCreation(beanName)) &#123;</span><br><span class="line">            <span class="comment">// 从二级缓存earlySingletonObjects获取已经实例化的Bean</span></span><br><span class="line">			singletonObject = <span class="built_in">this</span>.earlySingletonObjects.get(beanName);</span><br><span class="line">            <span class="comment">// 如果没有实例化的Bean， 但是参数allowEarlyReference为true</span></span><br><span class="line">			<span class="keyword">if</span> (singletonObject == <span class="literal">null</span> &amp;&amp; allowEarlyReference) &#123;</span><br><span class="line">                <span class="comment">//这个地方为什么要锁住呢，和双检锁一样的写法</span></span><br><span class="line">				<span class="keyword">synchronized</span> (<span class="built_in">this</span>.singletonObjects) &#123;</span><br><span class="line">					<span class="comment">// Consistent creation of early reference within full singleton lock 在全单例锁中创建一致的早期引用</span></span><br><span class="line">                    <span class="comment">//从一级缓存singletonObjects中获取是否存在当前bean</span></span><br><span class="line">					singletonObject = <span class="built_in">this</span>.singletonObjects.get(beanName);</span><br><span class="line">					<span class="keyword">if</span> (singletonObject == <span class="literal">null</span>) &#123;</span><br><span class="line">						singletonObject = <span class="built_in">this</span>.earlySingletonObjects.get(beanName);</span><br><span class="line">						<span class="keyword">if</span> (singletonObject == <span class="literal">null</span>) &#123;</span><br><span class="line">                             <span class="comment">// 从三级缓存singletonFactories获取ObjectFactory</span></span><br><span class="line">							ObjectFactory&lt;?&gt; singletonFactory = <span class="built_in">this</span>.singletonFactories.get(beanName);</span><br><span class="line">							<span class="keyword">if</span> (singletonFactory != <span class="literal">null</span>) &#123;</span><br><span class="line">                                <span class="comment">// 使用三级缓存ObjectFactory获取Bean实例</span></span><br><span class="line">								singletonObject = singletonFactory.getObject();</span><br><span class="line">                                <span class="comment">// 保存实例， 并清理三级缓存ObjectFactory</span></span><br><span class="line">								<span class="built_in">this</span>.earlySingletonObjects.put(beanName, singletonObject);</span><br><span class="line">								<span class="built_in">this</span>.singletonFactories.remove(beanName);</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> singletonObject;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** 维护着所有创建完成的Bean */</span> <span class="comment">//一级缓存</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; singletonObjects = <span class="keyword">new</span> <span class="title class_">ConcurrentHashMap</span>&lt;String, Object&gt;(<span class="number">256</span>);</span><br><span class="line"><span class="comment">/** 维护着所有半成品的Bean */</span> <span class="comment">//二级缓存</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; earlySingletonObjects = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;String, Object&gt;(<span class="number">16</span>);</span><br><span class="line"><span class="comment">/** 维护着创建中Bean的ObjectFactory */</span> <span class="comment">//三级缓存</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, ObjectFactory&lt;?&gt;&gt; singletonFactories = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;String, ObjectFactory&lt;?&gt;&gt;(<span class="number">16</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// DefaultSingletonBeanRegistry 类中的属性，包含bean的三种缓存map</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; singletonObjects = <span class="keyword">new</span> <span class="title class_">ConcurrentHashMap</span>&lt;&gt;(<span class="number">256</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">/** Cache of singleton factories: bean name to ObjectFactory. */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, ObjectFactory&lt;?&gt;&gt; singletonFactories = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;(<span class="number">16</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">/** Cache of early singleton objects: bean name to bean instance. */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; earlySingletonObjects = <span class="keyword">new</span> <span class="title class_">ConcurrentHashMap</span>&lt;&gt;(<span class="number">16</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">/** Set of registered singletons, containing the bean names in registration order. */</span> </span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Set&lt;String&gt; registeredSingletons = <span class="keyword">new</span> <span class="title class_">LinkedHashSet</span>&lt;&gt;(<span class="number">256</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">/** Names of beans that are currently in creation. */</span> <span class="comment">//正在创建中的bean集合</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Set&lt;String&gt; singletonsCurrentlyInCreation =</span><br><span class="line">			Collections.newSetFromMap(<span class="keyword">new</span> <span class="title class_">ConcurrentHashMap</span>&lt;&gt;(<span class="number">16</span>));</span><br></pre></td></tr></table></figure>
+
+<p>spring解决循环依赖的过程，图上写出来理解很简单，但是要讲清晰还是不到位</p>
+<p><img src="https://pic1.zhimg.com/80/v2-1e7bd042df73e47bb951e70b298c96ca_1440w.webp?source=1940ef5c" alt="img"></p>
+<p>计划明天把观察者模式demo写完、有效的括号算法写完、spring实现ioc的demo写完</p>
+<h2 id="11-05"><a href="#11-05" class="headerlink" title="11.05"></a>11.05</h2><p>今天学了两个小时，下午出去玩了，晚上回来休息了，看了下考试的题目，确实很难，侧面反映就业环境卷</p>
+<p>【我在德国写代码-沉浸式体验程序员国外求职&amp;肉翻干货指南【码农求职路】】 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1dt4y1w77u/?share_source=copy_web&amp;vd_source=f8b1da795bc0701ef95e1892ee677d16">https://www.bilibili.com/video/BV1dt4y1w77u/?share_source=copy_web&amp;vd_source=f8b1da795bc0701ef95e1892ee677d16</a></p>
+<p>star法则、</p>
+<p>延时队列：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ChineseSoftware/article/details/123330873">https://blog.csdn.net/ChineseSoftware/article/details/123330873</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/itguangit/article/details/107255368">https://blog.csdn.net/itguangit/article/details/107255368</a></p>
+<p>看了下其中的api接口，新代码提交到studydemo，但每次请求都会创建一个线程，需优化。调试了很多次都没有满意的方案</p>
+<h2 id="11-04"><a href="#11-04" class="headerlink" title="11.04"></a>11.04</h2><p>除了上班，今天花了两个半小时学习，</p>
+<p>【三年经验 某蚁外包，项目只会CRUD，听我建议直接跳槽18K【Java面试】实录程序员】 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1uP4y1U7sw/?p=2&amp;share_source=copy_web&amp;vd_source=f8b1da795bc0701ef95e1892ee677d16">https://www.bilibili.com/video/BV1uP4y1U7sw/?p=2&amp;share_source=copy_web&amp;vd_source=f8b1da795bc0701ef95e1892ee677d16</a></p>
+<p>面试应该要有自信，不能表现出自己很菜，沟通表达要专业</p>
+<p>spring中的bean都是默认单例的，可通过设置scope&#x3D;protorype来配置成多例 、singleton,protorype, request,session,global session @Scope(value &#x3D; ConfigurableBeanFactory.SCOPE_PROTOTYPE)  单例优点降低了实例创建和销毁所占用的资源，缺点线程共享一个实体，会发生线程安全问题。</p>
+<p>多例线程之间数据隔离，所以不会有线程安全问题，但是频繁的实例创建和销毁会带来资源的大量浪费。</p>
+<p><a target="_blank" rel="noopener" href="https://vuepress.mirror.docker-practice.com/introduction/">https://vuepress.mirror.docker-practice.com/introduction/</a> docker go语言实现</p>
+<p>操作系统层面的虚拟化，对进程隔离、镜像好比类，容器类似实例、有封装隔离特性、dockerfile构建镜像、from指定基础镜像、</p>
+<p>docker目前只能构建镜像，不能对环境变量等配置进行控制。。</p>
+<p>如果容器IP重启一直变需要用固定的ip启动容器、</p>
+<p>docker和虚拟机的区别，docker compose.yml是什么，感觉现在都会用docker-compose的方式</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37768368/article/details/120583141">https://blog.csdn.net/qq_37768368/article/details/120583141</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/387840381">https://zhuanlan.zhihu.com/p/387840381</a></p>
+<p>docker compose -p 可在多项目直接切换，且环境隔离，符合主流使用习惯，应该是以后的潮流，现在我们新项目也都要求docker compose部署了 ，这块还没玩过，感觉挺好用的 </p>
+<p>todo </p>
+<p>今天在公司用了下延时队列实现业务，但是存在一个问题，这种写法队列里本来应该有多个任务执行的，后面打印日志发现只会有一个任务执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">delayEndRecord</span><span class="params">(String data, <span class="type">int</span> num)</span> &#123;</span><br><span class="line">    <span class="type">RobotRecordDelay</span> <span class="variable">delay</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RobotRecordDelay</span>(num, data, num, TimeUnit.SECONDS);</span><br><span class="line">    <span class="keyword">if</span>(queue.size() &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        Iterator&lt;RobotRecordDelay&gt; iterator = queue.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext())&#123;</span><br><span class="line">            <span class="type">RobotRecordDelay</span> <span class="variable">recordDelay</span> <span class="operator">=</span> iterator.next();</span><br><span class="line">            <span class="keyword">if</span>(recordDelay.getData().equals(delay.getData()))&#123;</span><br><span class="line">                <span class="keyword">if</span>(queue.remove(recordDelay))&#123;</span><br><span class="line">                    queue.put(delay);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        queue.put(delay);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">Thread</span> <span class="variable">thread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(()-&gt;&#123;</span><br><span class="line">        <span class="keyword">while</span> (queue.size() != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">//取队列头部元素是否过期</span></span><br><span class="line">            <span class="type">RobotRecordDelay</span> <span class="variable">task</span> <span class="operator">=</span> queue.poll();</span><br><span class="line">            <span class="keyword">if</span> (task != <span class="literal">null</span>) &#123;</span><br><span class="line">                log.info(<span class="string">&quot;录制:&#123;&#125;被取消, 取消时间:&#123;&#125;&quot;</span>, JSONObject.toJSONString(task), LocalDateTime.now().format(DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>)));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    thread.start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>三个算法题忘记怎么写了，看了一遍思路，明天刷掉</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Skyline</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ningxis.github.io/posts/535d1ea3.html">https://ningxis.github.io/posts/535d1ea3.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ningxis.github.io" target="_blank">Skyline</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/2022/">2022</a><a class="post-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a></div><div class="post_share"><div class="social-share" data-image="https://pic1.zhimg.com/80/v2-1e7bd042df73e47bb951e70b298c96ca_1440w.webp?source=1940ef5c" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/622a5765.html"><img class="prev-cover" src="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/2023review.png" onerror="onerror=null;src='https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">2022年度总结</div></div></a></div><div class="next-post pull-right"><a href="/posts/9743aa26.html"><img class="next-cover" src="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/index.jpg" onerror="onerror=null;src='https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">网址收藏-技术</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/28741.html" title="2022"><img class="cover" src="https://images.unsplash.com/photo-1463863711260-be04156bf894?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjcwOTV9&s=576919f207ec3afba700b778da44b3f8" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-25</div><div class="title">2022</div></div></a></div><div><a href="/posts/18197.html" title="butterfly"><img class="cover" src="https://images.unsplash.com/photo-1433477221118-6eca20a0d62e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=da0ade88b8207debaf50515aebc4b3f0" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-23</div><div class="title">butterfly</div></div></a></div><div><a href="/posts/24489.html" title="happy new year 2022"><img class="cover" src="https://images.unsplash.com/photo-1564907587809-3e1969b66ad3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjcwOTV9" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-01</div><div class="title">happy new year 2022</div></div></a></div><div><a href="/posts/622a5765.html" title="2022年度总结"><img class="cover" src="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/2023review.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-01</div><div class="title">2022年度总结</div></div></a></div><div><a href="/posts/9743aa26.html" title="网址收藏-技术"><img class="cover" src="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/index.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-16</div><div class="title">网址收藏-技术</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/head.jpeg" onerror="this.onerror=null;this.src='https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Skyline</div><div class="author-info__description">笃定成全自由</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ningxis"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ningxis" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:dingning2333@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><h3>1、凡事都有可能，永远别说永远</h3><h3>2、生活不可能像你想象得那么好，但也不会像你想象得那么糟。 我觉得人的脆弱和坚强都超乎自己的想象。 有时，我可能脆弱得一句话就泪流满面；有时，也发现自己咬着牙走了很长的路</h3><h3>3、人生活在希望之中，旧的希望实现了，或者泯灭了，新的希望的烈焰随之燃烧起来。如果一个人只管活一天算一天，什么希望也没有，他的生命实际上也就停止了</h3></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#12-12"><span class="toc-number">1.</span> <span class="toc-text">12.12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-11"><span class="toc-number">2.</span> <span class="toc-text">12.11</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-10"><span class="toc-number">3.</span> <span class="toc-text">12.10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-9"><span class="toc-number">4.</span> <span class="toc-text">12.9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-8"><span class="toc-number">5.</span> <span class="toc-text">12.8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-7"><span class="toc-number">6.</span> <span class="toc-text">12.7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-6"><span class="toc-number">7.</span> <span class="toc-text">12.6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-5"><span class="toc-number">8.</span> <span class="toc-text">12.5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-4"><span class="toc-number">9.</span> <span class="toc-text">12.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-3"><span class="toc-number">10.</span> <span class="toc-text">12.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-2"><span class="toc-number">11.</span> <span class="toc-text">12.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-1"><span class="toc-number">12.</span> <span class="toc-text">12.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-30"><span class="toc-number">13.</span> <span class="toc-text">11.30</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-29"><span class="toc-number">14.</span> <span class="toc-text">11.29</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-28"><span class="toc-number">15.</span> <span class="toc-text">11.28</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-27"><span class="toc-number">16.</span> <span class="toc-text">11.27</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-26"><span class="toc-number">17.</span> <span class="toc-text">11.26</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-25"><span class="toc-number">18.</span> <span class="toc-text">11.25</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-24"><span class="toc-number">19.</span> <span class="toc-text">11.24</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-23"><span class="toc-number">20.</span> <span class="toc-text">11.23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-22"><span class="toc-number">21.</span> <span class="toc-text">11.22</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-21"><span class="toc-number">22.</span> <span class="toc-text">11.21</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-20"><span class="toc-number">23.</span> <span class="toc-text">11.20</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-19"><span class="toc-number">24.</span> <span class="toc-text">11.19</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-15"><span class="toc-number">25.</span> <span class="toc-text">11.15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-14"><span class="toc-number">26.</span> <span class="toc-text">11.14</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-13"><span class="toc-number">27.</span> <span class="toc-text">11.13</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-12"><span class="toc-number">28.</span> <span class="toc-text">11.12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-09"><span class="toc-number">29.</span> <span class="toc-text">11.09</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-08"><span class="toc-number">30.</span> <span class="toc-text">11.08</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-06"><span class="toc-number">31.</span> <span class="toc-text">11.06</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-05"><span class="toc-number">32.</span> <span class="toc-text">11.05</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-04"><span class="toc-number">33.</span> <span class="toc-text">11.04</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/fbd868ed.html" title="2024，重新出发"><img src="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/index.jpg" onerror="this.onerror=null;this.src='https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/404.jpg'" alt="2024，重新出发"/></a><div class="content"><a class="title" href="/posts/fbd868ed.html" title="2024，重新出发">2024，重新出发</a><time datetime="2024-02-27T08:58:23.000Z" title="发表于 2024-02-27 16:58:23">2024-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bfbc8ee0.html" title="2023年度总结"><img src="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/guangmingding.JPG" onerror="this.onerror=null;this.src='https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/404.jpg'" alt="2023年度总结"/></a><div class="content"><a class="title" href="/posts/bfbc8ee0.html" title="2023年度总结">2023年度总结</a><time datetime="2024-01-02T11:37:48.000Z" title="发表于 2024-01-02 19:37:48">2024-01-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/13a7815d.html" title="程序员延寿指南"><img src="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/index.jpg" onerror="this.onerror=null;this.src='https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/404.jpg'" alt="程序员延寿指南"/></a><div class="content"><a class="title" href="/posts/13a7815d.html" title="程序员延寿指南">程序员延寿指南</a><time datetime="2023-03-19T12:09:16.000Z" title="发表于 2023-03-19 20:09:16">2023-03-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/225f0a45.html" title="windows快捷键大全"><img src="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/index.jpg" onerror="this.onerror=null;this.src='https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/404.jpg'" alt="windows快捷键大全"/></a><div class="content"><a class="title" href="/posts/225f0a45.html" title="windows快捷键大全">windows快捷键大全</a><time datetime="2023-03-03T15:25:10.000Z" title="发表于 2023-03-03 23:25:10">2023-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/afc7f910.html" title="如何准备系统设计面试?"><img src="https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/index.jpg" onerror="this.onerror=null;this.src='https://utrydata.oss-cn-hangzhou.aliyuncs.com/files/404.jpg'" alt="如何准备系统设计面试?"/></a><div class="content"><a class="title" href="/posts/afc7f910.html" title="如何准备系统设计面试?">如何准备系统设计面试?</a><time datetime="2023-01-21T06:26:49.000Z" title="发表于 2023-01-21 14:26:49">2023-01-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;1998 - 2024 By Skyline</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">此后如竟没有炬火，我便是唯一的光。</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = 'b16a1fa0e63c46a4b8f28abfb06ae3fe';
+  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '112.982279,28.19409';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><!-- hexo injector body_end end --></body></html>

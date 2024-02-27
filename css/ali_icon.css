@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2112920 */
+  src: url('//at.alicdn.com/t/font_2112920_9zr4tiizz9b.woff2?t=1623074848156') format('woff2'),
+       url('//at.alicdn.com/t/font_2112920_9zr4tiizz9b.woff?t=1623074848156') format('woff'),
+       url('//at.alicdn.com/t/font_2112920_9zr4tiizz9b.ttf?t=1623074848156') format('truetype');
+}
+
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pengyouquan:before {
+  content: "\e65b";
+  color: #07C160;
+}
+
+.icon-shuji:before {
+  content: "\e609";
+  color: #59AAFF
+}
+
+.icon-yingshi1:before {
+  content: "\f107";
+  color: #59AAFF
+}
+
+.icon-daohang:before {
+  content: "\e608";
+  color: #1296DB
+}
+
+.icon-fenxiang:before {
+  content: "\e623";
+  color: #43CD80
+}
+
+.icon-shouyex:before {
+  content: "\e616";
+  color: #37BAFB
+}
+
+.icon-fenlei1:before {
+  content: "\e605";
+  color: #24DB5A
+}
+
+.icon-liaotian-04:before {
+  content: "\e607";
+  color: #24DB5A
+}
+
+.icon-xiangce:before {
+  content: "\e672";
+  color: #CC6666
+}
+
+.icon-gerenzhongxin:before {
+  content: "\e60b";
+  color: #007AFF
+}
+
+.icon-shenghuo:before {
+  content: "\e614";
+  color: #FCAC38
+}
+
+.icon-weixin1:before {
+  content: "\e620";
+  color: #24DB5A
+}
+
+.icon-biaoqian1:before {
+  content: "\e602";
+  color: #FFB300
+}
+
+.icon-zuixinwenzhang_huaban:before {
+  content: "\e615";
+  color: #03A9F4
+}
+
+.icon-shejiaotubiao-46:before {
+  content: "\e64b";
+  color: #49C0FB
+}
+
+.icon-bilibili-line:before {
+  content: "\e627";
+  color: #1E88E5
+}
+
+.icon-xiangmu:before {
+  content: "\e634";
+  color: #6966FD
+}
+
+.icon-shijianzhou:before {
+  content: "\e69a";
+  color: #e212be
+}
+
+.icon-lianjie:before {
+  content: "\e706";
+  color: #595cfb
+}
+
+.icon-qingdan:before {
+  content: "\e677";
+  color: #ad124b
+}
+
+.icon-tongzhi:before {
+  content: "\e984";
+  color: #24d2b2
+}
+
+.icon-csdn:before {
+  content: "\e638";
+  color: #FF0000
+}
+
+
+.icon-QQ:before {
+  content: "\e667";
+}
+
+.icon-tubiaozhizuomoban:before {
+  content: "\e625";
+  color: #00FF7F;
+  font-size: 22px;
+  
+}
+
+.icon-gitee-fill-round:before {
+  content: "\e686";
+  color: #FF0000
+}
